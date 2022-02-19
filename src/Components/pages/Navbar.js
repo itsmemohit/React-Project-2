@@ -33,7 +33,7 @@ function Navbar() {
             <div className="navbar-container container">
                 <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                     <GrFingerPrint className='navbar-icon' />
-                    MD 
+                    CARDX
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars />}
