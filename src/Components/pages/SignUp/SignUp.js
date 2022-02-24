@@ -3,15 +3,12 @@ import Footer from '../Footer/Footer';
 import './SignUp.css';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { GrFingerPrint } from 'react-icons/gr';
-import HeroSection from '../HeroSection'
-import { homeObjThree } from './Data'
+import { Link } from 'react-router-dom';
+
 
 function SignUp() {
     return (
         <div>
-
-
-            {/* <HeroSection {...homeObjThree} /> */}
             <div className="SignUpPage">
                 <div className="row formoutline">
                     <div className="logosection">
@@ -65,9 +62,10 @@ function SignUp() {
                                 type="confirmPassword"
                                 />
                             </FormGroup>
-                            <Button className="signupbutton" style={{display:'flex'}} color="primary">
+                            <Button className="signupbutton" style={{display:'block'}} color="primary">
                                 Sign Up
                             </Button>
+                            <div style={{textAlign: 'center'}}>Already have an account?<Link to='/'>Login Here</Link></div>
                         </Form>
                     </div>
                 </div>
