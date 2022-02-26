@@ -1,4 +1,4 @@
-.LoginPage{
+.SignUpPage{
     margin: 2rem;
     display: flex;
     align-items: center;
@@ -16,12 +16,12 @@
     margin-bottom: 2rem;
 }
 
-Input[type=name], Input[type=email], Input[type=password], Input[type=confirmPassword]
+Input[type=email], Input[type=password]
 {
     border:none;
     border-bottom: 1px solid lightgray;
 }
 
-.loginbutton{
+.signupbutton{
     margin: auto;
 }

@@ -1,34 +1,23 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
-import './SignUp.css';
+import './Login.css';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { GrFingerPrint } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 
 
-function SignUp() {
+function Login() {
     return (
         <div>
-            <div className="SignUpPage">
+            <div className="LoginPage">
                 <div className="row formoutline">
                     <div className="logosection">
                         <h1><strong>CARDX</strong></h1>
                         <h1><GrFingerPrint size="72" className="logo"/></h1>
                     </div>
-                    <div className="signupsection">
-                        <h3>Create Account</h3>
+                    <div className="loginsection">
+                        <h3>Enter your details</h3>
                         <Form>
-                            <FormGroup>
-                                <Label for="name">
-                                Name
-                                </Label>
-                                <Input
-                                id="name"
-                                name="name"
-                                placeholder="Enter your full name"
-                                type="name"
-                                />
-                            </FormGroup>
                             <FormGroup>
                                 <Label for="email">
                                 Email
@@ -51,21 +40,10 @@ function SignUp() {
                                     type="password"
                                     />
                             </FormGroup>
-                            <FormGroup>
-                                <Label for="confirmPassword">
-                                Confirm Password
-                                </Label>
-                                <Input
-                                id="confirmPassword"
-                                name="confirmPassword"
-                                placeholder="Re-Enter your password"
-                                type="confirmPassword"
-                                />
-                            </FormGroup>
-                            <Button className="signupbutton" style={{display:'block'}} color="primary">
-                                Sign Up
+                            <Button className="loginbutton" style={{display:'block'}} color="primary">
+                                Login
                             </Button>
-                            <div style={{textAlign: 'center'}}>Already have an account?<Link to='/login'>Login Here</Link></div>
+                            <div style={{textAlign: 'center'}}>Don't have an account?<Link to='/sign-up'>Sign up Here</Link></div>
                         </Form>
                     </div>
                 </div>
@@ -75,4 +53,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default Login;

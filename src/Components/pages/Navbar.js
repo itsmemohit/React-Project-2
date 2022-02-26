@@ -64,6 +64,16 @@ function Navbar() {
                                         buttonSize='btn--mobile'>SIGN UP</Button>
                             </Link>}
                     </li>
+                    <li className="nav-btn">
+                        {button ? (
+                            <Link to="/login" className='btn-link'>
+                                <Button buttonStyle='btn--outline'>LOGIN</Button>
+                            </Link>
+                        ) : <Link to="/login" className='btn-link'>
+                                <Button buttonStyle='btn--outline'  onClick={closeMobileMenu}
+                                        buttonSize='btn--mobile'>LOGIN</Button>
+                            </Link>}
+                    </li>
                 </ul>
             </div>
             
