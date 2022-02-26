@@ -1,10 +1,11 @@
-import React from 'react';
-import Footer from '../Footer/Footer';
 import './Login.css';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import { GrFingerPrint } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
 
+import React from 'react';
+import {GrFingerPrint} from 'react-icons/gr';
+import {Link} from 'react-router-dom';
+import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
+
+import Footer from '../Footer/Footer';
 
 function Login() {
     return (
@@ -23,33 +24,34 @@ function Login() {
                                 Email
                                 </Label>
                                 <Input
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email address"
-                                type="email"
-                                />
-                            </FormGroup>
+    id = "email"
+    name = "email"
+    placeholder = "Enter your email address"
+    type =
+        "email" / >
+        </FormGroup>
                             <FormGroup>
                                 <Label for="password">
                                     Password
-                                    </Label>
-                                    <Input
-                                    id="password"
-                                    name="password"
-                                    placeholder="Enter your password"
-                                    type="password"
-                                    />
-                            </FormGroup>
+                                    </Label><
+        Input
+    id = "password"
+    name = "password"
+    placeholder = "Enter your password"
+    type =
+        "password" / >
+        </FormGroup>
                             <Button className="loginbutton" style={{display:'block'}} color="primary">
                                 Login
                             </Button>
-                            <div style={{textAlign: 'center'}}>Don't have an account?<Link to='/sign-up'>Sign up Here</Link></div>
-                        </Form>
+                <div style = {{ textAlign: 'center' }}>Don
+                't have an account?<Link to=' /
+                sign -
+            up'>Sign up Here</Link></div> </Form>
                     </div>
-                </div>
             </div>
-                        <Footer />
-                    </div>
+            </div><Footer /><
+        /div>
     );
 }
 

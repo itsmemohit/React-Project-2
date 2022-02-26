@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { GrFingerPrint } from 'react-icons/gr';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Button } from './Button';
 import './Navbar.css';
-import { IconContext } from 'react-icons/lib';
+
+import React, {useEffect, useState} from 'react';
+import {FaBars, FaTimes} from 'react-icons/fa';
+import {GrFingerPrint} from 'react-icons/gr';
+import {IconContext} from 'react-icons/lib';
+import {Link} from 'react-router-dom';
+
+import {Button} from './Button';
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
-    useEffect(() => {
-        showButton();
-    }, []);
+  useEffect(() => { showButton(); }, []);
 
-    window.addEventListener('resize', showButton);
- 
+  window.addEventListener('resize', showButton);
+
     return (
-        <IconContext.Provider value={{ color: '#fff'}}>
+        <IconContext.Provider value={{
+    color: '#fff'}}>
         <div className="navbar">
             <div className="navbar-container container">
                 <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
@@ -36,8 +37,9 @@ function Navbar() {
                     CARDX
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
-                    {click ? <FaTimes/> : <FaBars />}
-                </div>
+                    {click ? <FaTimes/> : <FaBars />
+}
+</div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item" >
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
@@ -72,13 +74,13 @@ function Navbar() {
                         ) : <Link to="/login" className='btn-link'>
                                 <Button buttonStyle='btn--outline'  onClick={closeMobileMenu}
                                         buttonSize='btn--mobile'>LOGIN</Button>
-                            </Link>}
-                    </li>
-                </ul>
-            </div>
+                            </Link>
+}
+</li>
+                </ul></div>
             
-        </div>
-        </IconContext.Provider>
+        </div><
+    /IconContext.Provider>
     )
 }
 

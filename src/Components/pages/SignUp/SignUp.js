@@ -1,10 +1,11 @@
-import React from 'react';
-import Footer from '../Footer/Footer';
 import './SignUp.css';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import { GrFingerPrint } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
 
+import React from 'react';
+import {GrFingerPrint} from 'react-icons/gr';
+import {Link} from 'react-router-dom';
+import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
+
+import Footer from '../Footer/Footer';
 
 function SignUp() {
     return (
@@ -23,55 +24,54 @@ function SignUp() {
                                 Name
                                 </Label>
                                 <Input
-                                id="name"
-                                name="name"
-                                placeholder="Enter your full name"
-                                type="name"
-                                />
-                            </FormGroup>
+    id = "name"
+    name = "name"
+    placeholder = "Enter your full name"
+    type =
+        "name" / >
+        </FormGroup>
                             <FormGroup>
                                 <Label for="email">
                                 Email
-                                </Label>
-                                <Input
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email address"
-                                type="email"
-                                />
-                            </FormGroup>
+                                </Label><
+        Input
+    id = "email"
+    name = "email"
+    placeholder = "Enter your email address"
+    type =
+        "email" / >
+        </FormGroup>
                             <FormGroup>
                                 <Label for="password">
                                     Password
-                                    </Label>
-                                    <Input
-                                    id="password"
-                                    name="password"
-                                    placeholder="Enter your password"
-                                    type="password"
-                                    />
-                            </FormGroup>
+                                    </Label><
+        Input
+    id = "password"
+    name = "password"
+    placeholder = "Enter your password"
+    type =
+        "password" / >
+        </FormGroup>
                             <FormGroup>
                                 <Label for="confirmPassword">
                                 Confirm Password
-                                </Label>
-                                <Input
-                                id="confirmPassword"
-                                name="confirmPassword"
-                                placeholder="Re-Enter your password"
-                                type="confirmPassword"
-                                />
-                            </FormGroup>
+                                </Label><
+        Input
+    id = "confirmPassword"
+    name = "confirmPassword"
+    placeholder = "Re-Enter your password"
+    type =
+        "confirmPassword" / >
+        </FormGroup>
                             <Button className="signupbutton" style={{display:'block'}} color="primary">
                                 Sign Up
                             </Button>
-                            <div style={{textAlign: 'center'}}>Already have an account?<Link to='/login'>Login Here</Link></div>
-                        </Form>
-                    </div>
-                </div>
+        <div style = {{ textAlign: 'center' }}>Already have an account
+        ? <Link to = '/login'>Login Here</Link></div>
+              </Form>
+                    </div></div>
             </div>
-                        <Footer />
-                    </div>
+              <Footer />< /div>
     );
 }
 
