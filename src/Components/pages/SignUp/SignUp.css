@@ -1,0 +1,27 @@
+.LoginPage{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formoutline{
+    border: 1px solid black;
+    margin: auto;
+    padding: 2rem;
+}
+
+.logosection{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+Input[type=name], Input[type=email], Input[type=password], Input[type=confirmPassword]
+{
+    border:none;
+    border-bottom: 1px solid lightgray;
+}
+
+.loginbutton{
+    margin: auto;
+}
