@@ -1,13 +1,41 @@
 import "./SignUp.css";
-
 import React from "react";
 import { GrFingerPrint } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-
+import { auth } from '../../../firebase-config';
+import { useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged
+} from "firebase/auth";
 import Footer from "../Footer/Footer";
 
 function SignUp() {
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      console.log(user.registerEmail);
+      alert("Logged in is :" + user.registerEmail);
+    } catch (error) {
+      console.log(error.message);
+      alert("- " + error.message);
+    }
+  };
+
   return (
     <div>
       <div className="SignUpPage">
@@ -20,9 +48,9 @@ function SignUp() {
               <GrFingerPrint size="72" className="logo" />
             </h1>
           </div>
-          <div className="signupsection">
+          <div className="signupsection" id="modal-signup">
             <h3>Create Account</h3>
-            <Form>
+            <Form id="signup-form">
               <FormGroup>
                 <Label for="name">Name</Label>
                 <Input
@@ -39,6 +67,9 @@ function SignUp() {
                   name="email"
                   placeholder="Enter your email address"
                   type="email"
+                  onChange={(event) => {
+                    setRegisterEmail(event.target.value);
+                  }}
                 />
               </FormGroup>
               <FormGroup>
@@ -48,6 +79,9 @@ function SignUp() {
                   name="password"
                   placeholder="Enter your password"
                   type="password"
+                  onChange={(event) => {
+                    setRegisterPassword(event.target.value);
+                  }}
                 />
               </FormGroup>
               <FormGroup>
@@ -63,6 +97,7 @@ function SignUp() {
                 className="signupbutton"
                 style={{ display: "block" }}
                 color="primary"
+                onClick={register}
               >
                 Sign Up
               </Button>
