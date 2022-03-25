@@ -1,5 +1,4 @@
 import "./Login.css";
-
 import React from "react";
 import { GrFingerPrint } from "react-icons/gr";
 import { Link } from "react-router-dom";
@@ -7,10 +6,8 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { auth } from '../../../firebase-config';
 import { useState } from "react";
 import {
-
   signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut
+  onAuthStateChanged
 } from "firebase/auth";
 import Footer from "../Footer/Footer";
 import Dashboard from "../../Dashboard/Dashboard";
@@ -26,6 +23,7 @@ function Login() {
   });
 
   const login = async () => {
+    
     try {
       const user = await signInWithEmailAndPassword(
         auth,
@@ -37,11 +35,9 @@ function Login() {
     } catch (error) {
       console.log(error.message);
     }
+    
   };
 
-  const logout = async () => {
-    await signOut(auth);
-  };
 
   return (
     <div>
@@ -100,9 +96,7 @@ function Login() {
                   >
                     Sign up Here
                   </Link>
-                </div>{" "}
-                <h4> User Logged In: </h4>
-                {user?.email}
+                </div>
               </Form>
             </div>
 
