@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+
 import Form from '../Form/Form'
 
 class Dashboard extends Component {
-    render() {
+  render() {
         return (
             <div className="dashboard container">
                 <Form />
