@@ -5,15 +5,15 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-import { MdFingerprint } from "react-icons/md";
-import { Link } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {FaBars, FaTimes} from "react-icons/fa";
+import {IconContext} from "react-icons/lib";
+import {MdFingerprint} from "react-icons/md";
+import {Link} from "react-router-dom";
 
-import { auth } from "../../firebase-config";
+import {auth} from "../../firebase-config";
 
-import { Button } from "./Button";
+import {Button} from "./Button";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -38,59 +38,47 @@ function Navbar() {
 
   const [user, setUser] = useState({});
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  onAuthStateChanged(auth, (currentUser) => { setUser(currentUser); });
 
   console.log(auth.currentUser, auth);
 
- var name = "Hey!, " + auth.currentUser?.email;
+  var name = "Hey!, " + auth.currentUser?.email;
 
-  
-  const logout = async () => {
-    await signOut(auth);
-  };
+  const logout = async () => { await signOut(auth); };
 
   // if(auth.currentUser)
   // navigate('/home');
   return (
     <>
       <IconContext.Provider
-        value={{
-          color: "#fff",
-        }}
-      >
-        <nav className="navbar">
-          {!user ? (
-            <div className="navbar-container container">
-              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                <MdFingerprint className="navbar-icon" />
-                <Link className="nav-item">CARDX</Link>
+  value = {
+    { color: "#fff", }
+  } > <nav className = "navbar">{
+          !user
+          ? (<div className = "navbar-container container">
+             <Link to = "/" className =
+                  "navbar-logo" onClick = {closeMobileMenu}>
+             <MdFingerprint className = "navbar-icon" />
+             <Link className = "nav-item">CARDX</Link>
               </Link>
 
-              <div className="menu-icon" onClick={handleClick}>
-                {click ? <FaTimes /> : <FaBars />}
-              </div>
+             <div className = "menu-icon" onClick = {handleClick}>{
+               click ? <FaTimes />: <FaBars />
+             } <
+             /div>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
-                  <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                    Home
-                  </Link>
+                  <Link to="/" className=" nav -
+                 links " onClick={closeMobileMenu}>
+  Home</Link>
+                </li><li className = "nav-item">< Link
+  to = "/services"
+  className = "nav-links"
+  onClick = {closeMobileMenu} > {" "} Services</Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    to="/services"
-                    className="nav-links"
-                    onClick={closeMobileMenu}
-                  >
-                    {" "}
-                    Services
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/products"
-                    className="nav-links"
+            <li className = "nav-item">< Link
+  to = "/products"
+  className = "nav-links"
                     onClick={closeMobileMenu}
                   >
                     Products
@@ -104,8 +92,8 @@ function Navbar() {
                   ) : (
                     <Link to="/sign-up" className="btn-link">
                       <Button
-                        buttonStyle="btn--outline"
-                        buttonSize="btn--mobile"
+                    buttonStyle = "btn--outline"
+                    buttonSize = "btn--mobile"
                         onClick={closeMobileMenu}
                       >
                         SIGN UP
@@ -122,7 +110,7 @@ function Navbar() {
                   ) : (
                     <Link to="/login" className="btn-link">
                       <Button
-                        buttonStyle="btn--outline"
+                        buttonStyle = "btn--outline"
                         onClick={closeMobileMenu}
                         buttonSize="btn--mobile"
                       >
@@ -145,14 +133,15 @@ function Navbar() {
                 ) : (
                   <Link to="/" className="btn-link">
                     <Button
-                      buttonStyle="btn--outline"
+                        buttonStyle = "btn--outline"
                       onClick={closeMobileMenu}
                       buttonSize="btn--mobile"
                     >
                       LOGOUT
                     </Button>
                   </Link>
-                )}
+                )
+}
               </div>
 
               <div className="greeting" style={{ color: "white" }}>
@@ -164,6 +153,6 @@ function Navbar() {
       </IconContext.Provider>
     </>
   );
-}
+              }
 
-export default Navbar;
+              export default Navbar;

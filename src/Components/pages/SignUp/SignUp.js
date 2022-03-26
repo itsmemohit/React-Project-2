@@ -1,14 +1,16 @@
 import "./SignUp.css";
-import React from "react";
-import { GrFingerPrint } from "react-icons/gr";
-import { Link } from "react-router-dom";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-import { auth } from '../../../firebase-config';
-import { useState } from "react";
+
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged
 } from "firebase/auth";
+import React from "react";
+import {useState} from "react";
+import {GrFingerPrint} from "react-icons/gr";
+import {Link} from "react-router-dom";
+import {Button, Form, FormGroup, Input, Label} from "reactstrap";
+
+import {auth} from '../../../firebase-config';
 import Footer from "../Footer/Footer";
 
 function SignUp() {
@@ -17,17 +19,12 @@ function SignUp() {
 
   const [user, setUser] = useState({});
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  onAuthStateChanged(auth, (currentUser) => { setUser(currentUser); });
 
   const register = async () => {
     try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
+      const user = await createUserWithEmailAndPassword(auth, registerEmail,
+                                                        registerPassword);
       console.log(user.registerEmail);
       alert("Logged in is :" + user.registerEmail);
     } catch (error) {
@@ -54,22 +51,21 @@ function SignUp() {
               <FormGroup>
                 <Label for="name"></Label>
                 <Input
-                  id="name"
-                  name="name"
-                  placeholder="Enter your full name"
-                  type="name"
-                />
-              </FormGroup>
+  id = "name"
+  name = "name"
+  placeholder = "Enter your full name"
+  type =
+      "name" / >
+      </FormGroup>
               <FormGroup>
-                <Label for="email"></Label>
-                <Input
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  type="email"
-                  onChange={(event) => {
-                    setRegisterEmail(event.target.value);
-                  }}
+                <Label for="email"></Label><
+      Input
+  id = "email"
+  name = "email"
+  placeholder = "Enter your email address"
+  type = "email"
+                  onChange={
+    (event) => { setRegisterEmail(event.target.value); }}
                 />
               </FormGroup>
               <FormGroup>
@@ -87,12 +83,12 @@ function SignUp() {
               <FormGroup>
                 <Label for="confirmPassword"></Label>
                 <Input
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  placeholder="Re-Enter your password"
-                  type="password"
-                />
-              </FormGroup>
+                  id = "confirmPassword"
+                  name = "confirmPassword"
+                  placeholder = "Re-Enter your password"
+                  type =
+                      "password" / >
+                      </FormGroup>
               <Button
                 className="signupbutton"
                 style={{ display: "block" }}
@@ -101,15 +97,15 @@ function SignUp() {
               >
                 Sign Up
               </Button>
-              <div style={{ textAlign: "center" }}>
-                Already have an account ? <Link to="/login">Login Here</Link>
+                      <div style = {{ textAlign: "center" }}>Already have an
+                          account
+                      ? <Link to = "/login">Login
+                                Here</Link>
               </div>
-            </Form>
-          </div>
-        </div>
+                            </Form>
+          </div></div>
       </div>
-      <Footer />
-    </div>
+                            <Footer />< /div>
   );
 }
 
