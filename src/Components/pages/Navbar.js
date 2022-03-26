@@ -29,34 +29,31 @@ function Navbar() {
     return () => window.removeEventListener('resize', showButton);
   }, []);
 
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-
   const [user, setUser] = useState({});
 
   onAuthStateChanged(auth, (currentUser) => {
-    console.log("I'm called", currentUser);
     setUser(currentUser);
   });
   
   console.log(auth.currentUser, auth);
-  var name ="Hey!, " +  auth.currentUser?.email;
+  var name ="Hey! " +  auth.currentUser?.email;
 
-   const login = async () => {
+  //  const login = async () => {
     
-    try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
-      console.log(user);
-      alert(auth.currentUser.email);
-    } catch (error) {
-      console.log(error.message);
-    }
+  //   try {
+  //     const user = await signInWithEmailAndPassword(
+  //       auth,
+  //       loginEmail,
+  //       loginPassword
+  //     );
+  //     console.log(user);
+  //     alert(auth.currentUser.email);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
     
-  };
+  // };
+  
   const logout = async () => {
     await signOut(auth);
   };

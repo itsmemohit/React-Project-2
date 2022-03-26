@@ -52,7 +52,7 @@ function SignUp() {
             <h3>Create Account</h3>
             <Form id="signup-form">
               <FormGroup>
-                <Label for="name">Name</Label>
+                <Label for="name"></Label>
                 <Input
                   id="name"
                   name="name"
@@ -61,7 +61,7 @@ function SignUp() {
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="email">Email</Label>
+                <Label for="email"></Label>
                 <Input
                   id="email"
                   name="email"
@@ -73,7 +73,7 @@ function SignUp() {
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="password">Password</Label>
+                <Label for="password"></Label>
                 <Input
                   id="password"
                   name="password"
@@ -85,12 +85,12 @@ function SignUp() {
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="confirmPassword">Confirm Password</Label>
+                <Label for="confirmPassword"></Label>
                 <Input
                   id="confirmPassword"
                   name="confirmPassword"
                   placeholder="Re-Enter your password"
-                  type="confirmPassword"
+                  type="password"
                 />
               </FormGroup>
               <Button

@@ -58,7 +58,7 @@ function Login() {
               <h3>Enter your details</h3>
               <Form>
                 <FormGroup>
-                  <Label for="email">Email</Label>
+                  <Label for="email"></Label>
                   <Input
                     id="email"
                     name="email"
@@ -70,7 +70,7 @@ function Login() {
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="password">Password</Label>
+                  <Label for="password"></Label>
                   <Input
                     id="password"
                     name="password"
