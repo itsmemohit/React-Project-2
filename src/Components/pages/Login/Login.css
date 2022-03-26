@@ -12,7 +12,8 @@
 }
 
 .logosection{
-    text-align: center;
+    justify-content: center;
+    display: inline-grid;
     margin-bottom: 2rem;
 }
 
