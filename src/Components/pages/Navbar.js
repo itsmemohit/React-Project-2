@@ -2,7 +2,6 @@ import "./Navbar.css";
 
 import {
   onAuthStateChanged,
-  signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 import React, { useEffect, useState } from "react";
@@ -44,9 +43,9 @@ function Navbar() {
 
   console.log(auth.currentUser, auth);
 
- var name = "Hey!, " + auth.currentUser?.email;
+  var name = "Hey!, " + auth.currentUser?.email;
 
-  
+
   const logout = async () => {
     await signOut(auth);
   };
