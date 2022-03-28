@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase-config';
+import { getDatabase, ref, set } from "firebase/database";
 
 export default function Example() {
     const [firstName, setFirstName] = useState("");
@@ -8,19 +9,22 @@ export default function Example() {
     const [company, setCompany] = useState("");
     const [address, setaddress] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
 
-        db.collection("profile-info")
+    const handleSubmit = (e) => {
+        console.log("First Name:" + firstName);
+        e.preventDefault();
+        console.log("All: " + secondName, email, company, address);
+        db.collection('profile-info')
             .add({
-                firstName: firstName,
-                secondName: secondName,
-                email: email,
-                company: company,
-                address: address,
+                firstName: "firstName",
+                secondName: "secondName",
+                email: "email",
+                company: "company",
+                address: "address",
             })
             .then(() => {
                 alert('Message has been Submitted ');
+
             }).catch((error) => {
                 alert(error.message);
             });
@@ -30,6 +34,18 @@ export default function Example() {
         setCompany("");
         setaddress("");
     };
+
+    // await db.collection('cities').doc('new-city-id').set(data);
+    // // Add a new document with a generated id.
+    // const res = await db.collection('profile-info').add({
+    //     firstName: firstName,
+    //     secondName: secondName,
+    //     email: email,
+    //     company: company,
+    //     address: address
+    // });
+
+    // console.log('Added document with ID: ', res.id); index.js
 
     return (
         <>
@@ -139,13 +155,23 @@ export default function Example() {
                                     <button
                                         type="submit"
                                         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        onClick={handleSubmit}
+
                                     >
                                         Save
                                     </button>
                                 </div>
                             </div>
                         </form>
+                        {/* <form onSubmit={handleSubmit}>
+                            <label>
+                                Name:
+                                <input type="text" name="name"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                />
+                            </label>
+                            <input type="submit" value="Submit" />
+                        </form> */}
                     </div>
                 </div>
             </div>
