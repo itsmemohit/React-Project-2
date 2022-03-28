@@ -1,24 +1,25 @@
 export const homeObjOne = {
-    lightBg:  false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Exclusive Access',
-    headline: 'Unlimited Transaction with zero fees',
-    description: 'Get access to our exclusive diamond card that allows you to send unlimited transactions without getting charged any fees',
-    buttonLabel: 'Get Started',
-    imgStart: '',
-    img: 'images/svg-1.svg',
-    alt:'Credit Card'
-}
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Exclusive Access',
+  headline: ' Make Better Connections',
+  description:
+    'Smart business card helps you build and nurture new connections.',
+  buttonLabel: 'Get Started',
+  imgStart: '',
+  img: 'images/svg-1.svg',
+  alt: 'Credit Card'
+};
 
 export const homeObjTwo = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: '100% SECURE',
-  headline: 'Stay protected 24/7 anywhere anytime',
+  headline: 'Tell an engaging story',
   description:
-    'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
+    'Your identity is what sets you apart. Use OVOU Card to showcase a fuller and more impressive picture of who you are—beyond your job title—for a more meaningful interaction',
   buttonLabel: 'Learn More',
   imgStart: '',
   img: 'images/svg-5.svg',
@@ -30,9 +31,9 @@ export const homeObjThree = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'EASY SETUP',
-  headline: 'Super fast and simple onboarding process',
+  headline: 'Make every interaction count',
   description:
-    "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
+    "Create an engaging and memorable experience for the people you meet while saving your contact information directly into their phone with OVOU smart business card. Have them remember you long after the meeting is over.",
   buttonLabel: 'Start Now',
   imgStart: 'start',
   img: 'images/svg-7.svg',
@@ -43,10 +44,10 @@ export const homeObjFour = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'DATA ANALYTICS',
-  headline: 'Every transaction is stored on our secure cloud database',
+  topLine: '',
+  headline: 'Turn encounters into relationships',
   description:
-    'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
+    'Your ability to get their contact information is equally important. OVOU helps you get their contact details so you can identify and follow up on leads that are most promising',
   buttonLabel: 'Sign Up Now',
   imgStart: 'start',
   img: 'images/svg-8.svg',

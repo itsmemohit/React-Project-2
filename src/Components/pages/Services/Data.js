@@ -1,24 +1,25 @@
 export const homeObjOne = {
-    lightBg:  false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Exclusive Access',
-    headline: 'Unlimited Transaction with zero fees',
-    description: 'Get access to our exclusive diamond card that allows you to send unlimited transactions without getting charged any fees',
-    buttonLabel: 'Get Started',
-    imgStart: '',
-    img: 'images/svg-1.svg',
-    alt:'Credit Card'
-}
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Exclusive Access',
+  headline: 'Share contact details with a single tap',
+  description:
+    'For people who want to make a great first impression. Tap and  share your contact details, gather leads and connect to over 3,000 apps and CRM tools.',
+  buttonLabel: 'Get Started',
+  imgStart: '',
+  img: 'images/svg-1.svg',
+  alt: 'Credit Card'
+};
 
 export const homeObjTwo = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: '100% SECURE',
-  headline: 'Stay protected 24/7 anywhere anytime',
+  headline: 'The professional way to connect ',
   description:
-    'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
+    'Not just for in-person meetings, but also for online networking and virtual events.',
   buttonLabel: 'Learn More',
   imgStart: '',
   img: 'images/svg-5.svg',
