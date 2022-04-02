@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase-config';
-import { getDatabase, ref, set } from "firebase/database";
+import { collection, addDoc } from "firebase/firestore";
+import { serverTimestamp } from "firebase/firestore";
 
 export default function Example() {
     const [firstName, setFirstName] = useState("");
@@ -14,20 +15,43 @@ export default function Example() {
         console.log("First Name:" + firstName);
         e.preventDefault();
         console.log("All: " + secondName, email, company, address);
-        db.collection('profile-info')
-            .add({
-                firstName: "firstName",
-                secondName: "secondName",
-                email: "email",
-                company: "company",
-                address: "address",
-            })
-            .then(() => {
-                alert('Message has been Submitted ');
 
-            }).catch((error) => {
-                alert(error.message);
-            });
+        const docRef = addDoc(collection(db, "profile-info"), {
+            firstName: firstName,
+            secondName: secondName,
+            email: email,
+            company: company,
+            address: address,
+            timestamp: serverTimestamp()
+        }).then(() => {
+            alert('Message has been Submitted ');
+
+        }).catch((error) => {
+            alert(error.message);
+        });
+        console.log("Document written with ID: ", docRef.id);
+
+        // const q = query(collection(db, "profile-info"));
+        // const querySnapshot = await getDocs(q);
+        // querySnapshot.forEach((doc) => {
+        //     // doc.data() is never undefined for query doc snapshots
+        //     console.log(doc.id, " => ", doc.data());
+        // });
+
+        // db.collection('profile-info')
+        //     .add({
+        //         firstName: firstName,
+        //         secondName: secondName,
+        //         email: email,
+        //         company: company,
+        //         address: address
+        //     })
+        //     .then(() => {
+        //         alert('Message has been Submitted ');
+
+        //     }).catch((error) => {
+        //         alert(error.message);
+        //     });
         setFirstName("");
         setSecondName("");
         setEmail("");
