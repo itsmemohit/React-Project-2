@@ -22,7 +22,7 @@ function Pricing() {
                                         <FaFire />
                                     </div>
                                     <h3>Starter</h3>
-                                    <h4>$8.99</h4>
+                                    <h4>Rs 899</h4>
                                     <p>per month</p>
                                     <ul className="pricing__container-features">
                                         <li>100 Transactions</li>
@@ -41,7 +41,7 @@ function Pricing() {
                                         <BsXDiamondFill />
                                     </div>
                                     <h3>Gold</h3>
-                                    <h4>$29.99</h4>
+                                    <h4>Rs 2,999</h4>
                                     <p>per month</p>
                                     <ul className="pricing__container-features">
                                         <li>1000 Transactions</li>
@@ -60,12 +60,12 @@ function Pricing() {
                                         <GiCrystalize />
                                     </div>
                                     <h3>Diamond</h3>
-                                    <h4>$99.99</h4>
+                                    <h4>Rs 9,999</h4>
                                     <p>per month</p>
                                     <ul className="pricing__container-features">
                                         <li>Unlimited Transactions</li>
                                         <li>5% Cashback</li>
-                                        <li>$1M Limit</li>
+                                        <li>Unlimited Spending</li>
                                     </ul>
                                     <Button buttonSize='btn--mobile' buttonColor='primary'>
                                         Choose Plan

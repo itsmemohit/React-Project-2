@@ -1,24 +1,25 @@
 export const homeObjOne = {
-    lightBg:  false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Exclusive Access',
-    headline: 'Unlimited Transaction with zero fees',
-    description: 'Get access to our exclusive diamond card that allows you to send unlimited transactions without getting charged any fees',
-    buttonLabel: 'Get Started',
-    imgStart: '',
-    img: 'images/svg-1.svg',
-    alt:'Credit Card'
-}
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'VIEW OUR PRODUCTS',
+  headline: 'Make Better Connections',
+  description:
+    'Smart business card helps you build and nurture new connections.',
+  buttonLabel: 'Shop Now',
+  imgStart: '',
+  img: 'images/svg-4.svg',
+  alt: 'Credit Card'
+};
 
 export const homeObjTwo = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: '100% SECURE',
-  headline: 'Stay protected 24/7 anywhere anytime',
+  headline: 'Make every interaction count',
   description:
-    'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
+    'Create an engaging and memorable experience for the people you meet while saving your contact information directly into their phone with OVOU smart business card. Have them remember you long after the meeting is over.',
   buttonLabel: 'Learn More',
   imgStart: '',
   img: 'images/svg-5.svg',
